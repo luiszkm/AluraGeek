@@ -1,4 +1,6 @@
 /*All ===================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,22 +8,27 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   font-size: 62.5%;
-
+  --text-color: #FFFFFF;
+  --text-color-dark: #464646;
   --bg-white: #FFFFFF;
   --hue: 215;
   --text-link-color: hsl(var(--hue), 77%, 53%);
-  --bg-contrast-color:hsl(var(--hue), 83%, 95%);
+  --bg-contrast-color: hsl(var(--hue), 83%, 95%);
 
   --bg-color-login-page: hsl(0, 0%, 96%);
 }
+
 button {
   background-color: transparent;
 }
+
 .sr-only {
   opacity: 0;
   width: 1px;
@@ -33,16 +40,41 @@ button {
   border-width: 0;
   clip: rect(0, 0, 0, 0);
 }
-.hide{
+
+.hide {
   display: none;
 }
+
 body {
   font-size: 1.6rem;
+  font-family: 'Raleway', sans-serif;
+  color: var(--text-color-dark);
+
 }
+
 .page {
   width: 100%;
   max-width: 32rem;
   margin: 0 auto;
+}
+
+section header h1 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.6rem
+}
+
+section header a {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.product {
+  font-size: 1.4rem;
+}
+legend{
+  font-weight: 700;
 }
 /*Header =====================================================================*/
 header#main-header {
@@ -54,6 +86,7 @@ header#main-header {
   justify-content: space-between;
   padding: 0 1.8rem;
 }
+
 #login-button {
   width: 13.3rem;
   height: 4rem;
@@ -62,14 +95,17 @@ header#main-header {
   border: 1px solid var(--text-link-color);
   cursor: pointer;
 }
+
 #login-button:hover {
   background-color: var(--text-link-color);
   color: #FFFFFF;
   translate: 500;
 }
+
 #main-header svg {
   cursor: pointer;
 }
+
 label#search {
   width: 100%;
   max-width: 39rem;
@@ -82,12 +118,14 @@ label#search {
   padding: 0 1.2rem;
   background-color: #A2A2A2;
 }
+
 input#search-bar {
   width: 100%;
   height: 90%;
   background-color: #A2A2A2;
   outline: 0;
 }
+
 /* End Header =============================================================*/
 .see-it-all {
   color: var(--text-link-color);
@@ -99,15 +137,18 @@ input#search-bar {
   font-size: 1.4rem;
   line-height: 1.6rem
 }
-.input{
+
+.input {
   width: 100%;
   height: 4rem;
 }
-.textarea{
+
+.textarea {
   width: 100%;
   height: 8rem;
 }
-.button-submit{
+
+.button-submit {
   width: 15rem;
   height: 4rem;
   display: flex;
@@ -117,14 +158,16 @@ input#search-bar {
   text-align: center;
   color: white;
   cursor: pointer;
-  background-color:var(--text-link-color);
+  background-color: var(--text-link-color);
 }
-button:hover{
+
+button:hover {
   border: 1px solid var(--text-link-color);
   background-color: white;
   color: var(--text-link-color);
 }
-.button-menu{
+
+.button-menu {
   width: 15rem;
   height: 4rem;
   display: flex;
@@ -137,6 +180,7 @@ button:hover{
   cursor: pointer;
   background-color: var(--bg-white);
 }
+
 .button-menu:hover {
   background-color: var(--text-link-color);
   color: #FFFFFF;
@@ -144,34 +188,46 @@ button:hover{
 }
 
 /*Contact section =========================================================*/
-#contact{
+#contact {
   background-color: var(--bg-contrast-color);
   width: 100%;
   padding: 1.6rem;
 }
-#contact form{
+
+#contact form {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-#about{
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 1.6rem;
+
+#about {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
 }
-#about ul{
+
+#about ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
   gap: 1.6rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: var(--text-color-dark);
 }
 
-footer{
+footer {
   padding: 3.2rem 6.3rem;
   text-align: center;
   width: 100%;
   height: 10rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: var(--text-color-dark);
+
 }
