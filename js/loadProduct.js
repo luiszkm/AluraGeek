@@ -1,11 +1,12 @@
 import { AddProduct } from './addProduct.js'
 
-
-
+import { Modal } from './modal.js'
+const modal =Modal()
 const sectionOn = document.querySelector('#sectionOne .gallery')
+const sectionTwo = document.querySelector('#sectionTwo .gallery')
+const sectionTree = document.querySelector('#sectionTree .gallery')
 
 export function LoadProduct() {
-
 
   function createCard(image, name, price) {
 
@@ -20,19 +21,26 @@ export function LoadProduct() {
     return productCard
   }
 
-
   async function loadProduct() {
     try {
+      let products
+
       let loadProducts = await JSON.parse(localStorage.getItem('@api_products'))
-      const load = await loadProducts.forEach(product => {
-        product = createCard(product.image, product.name, product.price)
-        sectionOn.append(product)
-      })
-    }catch(error){
-      console.log(error);
+        .forEach((product) => {
+          products = createCard(product.image, product.name, product.price)
+          console.log(product.category);
+          if (product.category === 'main') {
+            sectionOn.append(products)
+          } else if (product.category === 'console') {
+            sectionTwo.append(products)
+          } else {
+            sectionTree.append(products)
+          }      
+        })
+    } catch (error) {
+      return
     }
-    
-  
+
   }
   loadProduct()
 
