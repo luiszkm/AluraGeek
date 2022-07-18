@@ -1,12 +1,12 @@
 
-export function Modal() {
+export async function Modal() {
 
-  const openModalButton = document.querySelector('#open-modal').onclick = openModal
+  const openModalButton = await document.querySelector('#open-modal')
   const closeModalButton = document.querySelector('#main-header').onclick = closeModal
-  
+
   const modal = document.querySelector('#modal')
 
-  function openModal() {
+  async function openModal() {
 
     document.querySelectorAll('.productSection').forEach(
       section => {
@@ -14,12 +14,9 @@ export function Modal() {
       })
     document.querySelector('.banner').classList.add('hide')
     modal.classList.remove('hide')
-
-
   }
 
-
-  function closeModal (){
+  function closeModal() {
 
     modal.classList.add('hide')
     document.querySelectorAll('.productSection').forEach(

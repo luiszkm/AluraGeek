@@ -7,4 +7,4 @@ import { Modal } from "./modal.js"
 const addProduct = AddProduct()
 const loadProduct = LoadProduct()
 const searchBar = SearchBar()
-const modal = Modal()
+

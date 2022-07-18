@@ -6,12 +6,12 @@ export function SearchBar() {
   const button = document.querySelectorAll('.button, .svg')
   const menuSearchBar = document.querySelector('#search')
   const inputSearch = document.querySelector('#search-bar')
-  
+
   const buttonSearch = document.querySelector('.button-search')
-  .onclick= openSearchBar
+    .onclick = openSearchBar
 
   const buttonCloseSearchBar = document.querySelector(' .close-search-bar')
-  .onclick = closeSearchBar
+    .onclick = closeSearchBar
 
   function openSearchBar() {
     button.forEach(button => button.classList.add('sr-only'))
@@ -29,8 +29,7 @@ export function SearchBar() {
   inputSearch.addEventListener('input', filtered)
 
   function filtered() {
-    console.log(this.value);
-    const products = document.querySelectorAll('.product')
+    console.log(this.value); const products = document.querySelectorAll('.product')
     const sections = document.querySelectorAll('.productSection')
 
     if (this.value.length > 0) {
@@ -43,18 +42,13 @@ export function SearchBar() {
 
         if (!expression.test(productName)) {
           product.classList.add('sr-only')
-
         } else {
           product.classList.remove('sr-only')
-
         }
-
       })
     } else {
       products.forEach(product => {
         product.classList.remove('sr-only')
-
-
       })
     }
   }

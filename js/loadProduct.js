@@ -1,12 +1,14 @@
 import { AddProduct } from './addProduct.js'
 
-const sectionOn = document.querySelector('#sectionOne .gallery')
 
-const addProduct = AddProduct()
+
+const sectionOn = document.querySelector('#sectionOne .gallery')
 
 export function LoadProduct() {
 
+
   function createCard(image, name, price) {
+
     const productCard = document.createElement("div")
     productCard.classList.add('product')
     productCard.innerHTML = `
@@ -18,21 +20,21 @@ export function LoadProduct() {
     return productCard
   }
 
-  let loadProducts = JSON.parse(localStorage.getItem('@api_products'))
 
   async function loadProduct() {
-    loadProducts.forEach(product => {
-      product = createCard(product.image, product.name, product.price)
-      //sectionOn.append(product)
-      console.log(product);
-    });
+    try {
+      let loadProducts = await JSON.parse(localStorage.getItem('@api_products'))
+      const load = await loadProducts.forEach(product => {
+        product = createCard(product.image, product.name, product.price)
+        sectionOn.append(product)
+      })
+    }catch(error){
+      console.log(error);
+    }
+    
+  
   }
-
   loadProduct()
-
-
-
-
 
 
   return {
