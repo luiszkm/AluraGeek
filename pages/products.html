@@ -79,11 +79,11 @@
         <div class="gallery">
           <div class="product adm-product">
             <div>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="deleteProduct" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z"
                   fill="white" />
               </svg>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class ="attProduct" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M3 17.2501V21.0001H6.75L17.81 9.94006L14.06 6.19006L3 17.2501ZM20.71 7.04006C21.1 6.65006 21.1 6.02006 20.71 5.63006L18.37 3.29006C17.98 2.90006 17.35 2.90006 16.96 3.29006L15.13 5.12006L18.88 8.87006L20.71 7.04006Z"
                   fill="white" />
@@ -166,6 +166,33 @@
 
     <footer>@luis_yoshi</footer>
 
+    
+  </div>
+  <div class="modal-adm sr-only">
+    <main>
+     
+        
+      <h2>Atualizar produto</h2>
+      <form >
+        <svg class="closeModalAdm" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.627 1.42188L9.04883 7L14.627 12.5781L13.2207 13.9844L7.64258 8.40625L2.06445 13.9844L0.658203 12.5781L6.23633 7L0.658203 1.42188L2.06445 0.015625L7.64258 5.59375L13.2207 0.015625L14.627 1.42188Z" fill="#FF859B"/>
+          </svg>
+        <label  class="sr-only" for="image">Imagem do produto</label>
+        <input type="url" id="image-adm" class="input" placeholder="url da imagem">
+
+        <label for="category" class="sr-only">categoria do produto</label>
+        <input type="text" id="category-adm" class="input" placeholder=" categoria">
+
+        <label class="sr-only" for="product-name-adm">nome do produto</label>
+        <input type="text" id="product-name" class="input" placeholder="produto XYZ">
+
+        <label class="sr-only" for="product-price-adm">Preço do produto</label>
+        <input type="text" id="product-price" class="input" placeholder="R$ 60,00">
+
+        <button id="att-product" class="button-submit">Atualizar</button>
+
+      </form>
+    </main>
   </div>
 
   <script src="../js/index.js" type="module"></script>

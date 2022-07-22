@@ -13,12 +13,12 @@ export function API() {
     }
 
   }
-  async function getProductById(url = api, id =1 ) {
+  async function getProductById(id ,url = api ) {
     try {
       let api = await fetch(`${url}/${id}`)
       let product = await api.json()
 
-      console.log(product);
+      return product
     } catch (error) {
       return
     }
@@ -33,6 +33,7 @@ export function API() {
         }
       })
       let products = await then(response => response.json())
+      return products
     } catch (error) {
       return
     }
