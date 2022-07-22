@@ -29,7 +29,8 @@ export function SearchBar() {
   inputSearch.addEventListener('input', filtered)
 
   function filtered() {
-    console.log(this.value); const products = document.querySelectorAll('.product')
+    console.log(this.value); 
+    const products = document.querySelectorAll('.product')
     const sections = document.querySelectorAll('.productSection')
 
     if (this.value.length > 0) {

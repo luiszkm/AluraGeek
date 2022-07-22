@@ -1,4 +1,5 @@
-
+import { API } from "./API.js"
+const api = API()
 
 
 export function AddProduct() {
@@ -11,7 +12,7 @@ export function AddProduct() {
       await buttonAddProduct.addEventListener('click', cardContentAdd)
 
     }catch(error){
-      console.log(error);
+      return
     }
   }
   button ()
@@ -24,14 +25,15 @@ export function AddProduct() {
     const productName = document.querySelector('#product-name').value
     const productPrice = document.querySelector('#product-price').value
 
-    const objectTest =  {
+    const newProduct =  {
       image: imageUrl,
       category: productCategory,
       name: productName,
       price: productPrice
     }
-    productList.push(objectTest)
-
+    
+    productList.push(newProduct)
+    api.addProduct(newProduct)
     localStorage.setItem('@api_products', JSON.stringify(productList))
   }
 

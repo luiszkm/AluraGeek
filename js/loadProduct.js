@@ -1,6 +1,9 @@
 import { AddProduct } from './addProduct.js'
-
+import { API } from './API.js'
 import { Modal } from './modal.js'
+
+const api = API()
+
 const modal =Modal()
 const sectionOn = document.querySelector('#sectionOne .gallery')
 const sectionTwo = document.querySelector('#sectionTwo .gallery')
@@ -24,9 +27,10 @@ export function LoadProduct() {
   async function loadProduct() {
     try {
       let products
+      let loadProducts =await api.getProducts()
+      
 
-      let loadProducts = await JSON.parse(localStorage.getItem('@api_products'))
-        .forEach((product) => {
+      loadProducts.forEach((product) => {
           products = createCard(product.image, product.name, product.price)
           console.log(product.category);
           if (product.category === 'main') {

@@ -1,0 +1,18 @@
+{
+  "profile": [
+    {
+      "image": "http://source.unsplash.com/random/8?",
+      "category": "console",
+      "name": "play1",
+      "price": "600",
+      "id": 1
+    },
+    {
+      "image": "http://source.unsplash.com/random/8?",
+      "category": "",
+      "name": "play2",
+      "price": "1000",
+      "id": 2
+    }
+  ]
+}

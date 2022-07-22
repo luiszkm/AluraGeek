@@ -1,13 +1,14 @@
-
-
+import { API } from "./API.js"
+const api = API()
 
 export function Admin() {
 
-  let products = JSON.parse(localStorage.getItem('@api_products'))
 
-  function createAdminCard() {
+  const sectionAdm = document.querySelector('#section-adm .gallery')
+
+  function createAdminCard(name, price, image) {
     const div = document.createElement('div')
-    div.classList.add('product','adm-product')
+    div.classList.add('product', 'adm-product')
     div.innerHTML = `
           <div>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,24 +21,33 @@ export function Admin() {
                 fill="white" />
             </svg>
           </div>
-          <img src="http://source.unsplash.com/random/-?" alt="">
-          <h4>miranha</h4>
-          <strong>R$ 9,99</strong>
+          <img src="${image}
+          " alt="">
+          <h4>${name}</h4>
+          <strong>R$${price}</strong>
           <a href="#">Ver Produto</a>
         </div>`
 
-        return div
+    return div
   }
 
   async function loadAdminProducts() {
+    let productAdm
+    let loadProducts = await api.getProducts()
 
     try {
-      console.log(products);
+      //JSON.parse(localStorage.getItem('@api_products'))
+      loadProducts.forEach(product => {
+
+        productAdm = createAdminCard(product.name, product.price, product.image)
+        sectionAdm.append(productAdm)
+      })
     } catch {
       return
     }
   }
 
   loadAdminProducts()
+
 
 }
