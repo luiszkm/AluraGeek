@@ -1,13 +1,13 @@
 export function API() {
-  const api = `http://localhost:3000/profile`;
+  const api = `http://localhost:3000/products`;
 
   async function getProducts(url = api) {
     try {
       let api = await fetch(url)
       let products = await api.json()
 
+      console.log(products[0].stock)
       return products
-
     } catch (error) {
       console.error(error)
     }
@@ -73,6 +73,21 @@ export function API() {
     }
   }
   
+  async function attPartProduct(stock, id, url = api){
+    try {
+      let api = await fetch(`${url}/${id}`,{
+        method: "PATCH",
+        body: JSON.stringify({"stock":`${stock}`}),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+      
+    } catch{
+
+    }
+  }
+ 
   getProducts(api) 
   return {
     getProducts,

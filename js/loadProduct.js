@@ -32,10 +32,9 @@ export function LoadProduct() {
 
       loadProducts.forEach((product) => {
           products = createCard(product.image, product.name, product.price)
-          console.log(product.category);
-          if (product.category === 'main') {
+          if (product.category === 'Geek') {
             sectionOn.append(products)
-          } else if (product.category === 'console') {
+          } else if (product.category === 'Gamer') {
             sectionTwo.append(products)
           } else {
             sectionTree.append(products)
@@ -50,6 +49,6 @@ export function LoadProduct() {
 
 
   return {
-
+    loadProduct
   }
 }

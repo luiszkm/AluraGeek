@@ -1,18 +1,20 @@
 {
-  "profile": [
+  "products": [
     {
-      "image": "http://source.unsplash.com/random/8?",
-      "category": "console",
-      "name": "play1",
-      "price": "600",
-      "id": 1
+      "image": "http://source.unsplash.com/random/*6",
+      "category": "Gamer",
+      "name": "Play 3",
+      "price": "80",
+      "stock": "5",
+      "id": 2
     },
     {
-      "image": "http://source.unsplash.com/random/8?",
-      "category": "",
-      "name": "play2",
-      "price": "1000",
-      "id": 2
+      "image": "http://source.unsplash.com/random/*?85",
+      "category": "Gamer",
+      "name": "play4",
+      "price": "700",
+      "stock": "10",
+      "id": 3
     }
   ]
 }

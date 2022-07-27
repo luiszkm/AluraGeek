@@ -77,8 +77,12 @@
         <label class="sr-only" for="image">Imagem do produto</label>
         <input type="url" id="image" class="input" placeholder="url da imagem">
 
-        <label for="category" class="sr-only">categoria do produto</label>
-        <input type="text" id="category" class="input" placeholder=" categoria">
+        <label for="category" class="">categoria do produto</label>
+        <select name="category" id="category" required >
+          <option value="Geek">Geek</option>
+          <option value="Gamer">Gamer</option>
+          <option value="Outros">Outros</option>
+        </select>
 
         <label class="sr-only" for="product-name">nome do produto</label>
         <input type="text" id="product-name" class="input" placeholder="produto XYZ">
