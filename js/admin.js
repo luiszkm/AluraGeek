@@ -6,7 +6,7 @@ export function Admin() {
 
   const sectionAdm = document.querySelector('#section-adm .gallery')
 
-  function createAdminCard(name, price, image, id) {
+  function createAdminCard(name, price, image, id, inventory) {
     const div = document.createElement('div')
     div.dataset.id = id
     div.classList.add('product', 'adm-product')
@@ -29,7 +29,10 @@ export function Admin() {
           " alt="">
           <h4>${name}</h4>
           <strong>R$${price}</strong>
-          <a href="#">Ver Produto</a>
+          <strong>ID:${id}</strong>
+          <p>total em estoque estoque:
+          <strong>${inventory}</strong>
+          </p>
         </div>`
 
     return div
@@ -43,7 +46,7 @@ export function Admin() {
       //JSON.parse(localStorage.getItem('@api_products'))
       loadProducts.forEach(product => {
 
-        productAdm = createAdminCard(product.name, product.price, product.image, product.id)
+        productAdm = createAdminCard(product.name, product.price, product.image, product.id, product.inventory)
         sectionAdm.append(productAdm)
       })
     } catch {

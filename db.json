@@ -5,7 +5,7 @@
       "category": "Gamer",
       "name": "Play 3",
       "price": "80",
-      "stock": "5",
+      "inventory": "5",
       "id": 2
     },
     {
@@ -13,8 +13,24 @@
       "category": "Gamer",
       "name": "play4",
       "price": "700",
-      "stock": "10",
+      "inventory": "10",
       "id": 3
+    },
+    {
+      "image": "http://source.unsplash.com/random/*61",
+      "category": "Geek",
+      "name": "psp",
+      "price": "350",
+      "inventory": "15",
+      "id": 4
+    },
+    {
+      "image": "http://source.unsplash.com/random/*5",
+      "category": "Geek",
+      "name": "xbox",
+      "price": "699",
+      "inventory": "18",
+      "id": 5
     }
   ]
 }

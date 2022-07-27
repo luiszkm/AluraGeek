@@ -24,13 +24,14 @@ export function AddProduct() {
     const productCategory = document.querySelector('#category').value
     const productName = document.querySelector('#product-name').value
     const productPrice = document.querySelector('#product-price').value
-    
+    const inventory = document.querySelector('#inventory').value
 
     const newProduct =  {
       image: imageUrl,
       category: productCategory,
       name: productName,
-      price: productPrice
+      price: productPrice,
+      inventory: inventory
     }
     
    // productList.push(newProduct)

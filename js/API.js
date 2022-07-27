@@ -77,7 +77,7 @@ export function API() {
     try {
       let api = await fetch(`${url}/${id}`,{
         method: "PATCH",
-        body: JSON.stringify({"stock":`${stock}`}),
+        body: JSON.stringify({inventory:`${stock}`}),
         headers: {
           "Content-type": "application/json; charset=UTF-8"
         }
